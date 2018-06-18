@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Select</title>
+    <style>
+        .selected-box {
+            height: 40px;
+            width: 100%;
+            position: absolute;
+            border: 1px dashed black;
+            z-index: 99;
+            background-color: rosybrown;
+
+        }
+        .information-box {
+            width: 100%;
+            position: absolute;
+            display: none;
+            top: 40px;
+            z-index: 100;
+            background-color: blanchedalmond;
+        }
+        .container {
+            width: 300px;
+            position: relative;
+        }
+        .selected-box:hover + .information-box {
+            cursor: pointer;
+                display: block;
+                transition: .8s;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: grey;
+            margin: 10px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="selected-box"></div>
+    <div class="information-box">
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+        </ul>
+    </div>
+</div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+</body>
+</html>

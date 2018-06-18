@@ -1,0 +1,31 @@
+
+.container {
+    border: 1px dashed indianred;
+    background-color: darkgray;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    width: 30%;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.big-container {
+    text-align: center;
+}
+
+
+@media (max-width: 766px) {
+    .container {
+        margin-bottom: 20px;
+        background-color: blueviolet;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        width: 100%;
+    }
+}
+
+

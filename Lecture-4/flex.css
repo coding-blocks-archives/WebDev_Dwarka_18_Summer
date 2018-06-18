@@ -1,0 +1,33 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box {
+    width: 33%;
+    height:200px;
+}
+
+.box1 {
+    background-color: indianred;
+}
+.box2 {
+    background-color: blueviolet;
+}
+.box3 {
+    background-color: darkgray;
+}
+
+.box4 {
+    background-color: orange;
+}
+.box5 {
+    background-color: green;
+}
+.box6 {
+    background-color: gold;
+}
+
+.box7 {
+    background-color: greenyellow;
+}
