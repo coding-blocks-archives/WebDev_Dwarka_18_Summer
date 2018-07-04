@@ -32,16 +32,6 @@ $(document).ready(function(){
 
     }
 
-
-    // function renderDetail(data){
-    //     let value;
-    //     data.forEach(function(d){
-    //         value = `<li>${d.title}</li>`;
-    //         result.append(value);
-    //
-    //     })
-    //
-    // }
 });
 
 
