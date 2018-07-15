@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const db = require('./database');
-
+let index = 0;
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -32,23 +32,37 @@ app.post('/add', function(req,res) {
             throw err;
         }
         else {
-            console.log(data);
-            res.sendStatus(200);
+            // Maintaining Index on Server
+            index ++;
+            res.send(index.toString());
         }
 
     });
 });
 
 app.post('/delete', function(req,res) {
-    //todoList.splice(req.body.id, 1);
-    res.sendStatus(200);
+    db.deleteItem(req.body.id, function(err){
+         if(err) throw err;
+         else res.sendStatus(200);
+
+    });
+
+
 });
 
 app.get('/display', function(req,res) {
 
     db.getData(function(data){
         console.log(data);
-        res.send(data);
+        if(data.length) {
+            index = data[data.length - 1].id;
+            console.log(index);
+            res.send(data);
+        }
+        else {
+
+        }
+
     });
 
 });
@@ -57,4 +71,5 @@ app.get('/display', function(req,res) {
 app.listen(5000, function(){
   console.log("Server running on port 5000")
    db.connectDB();
+
 });

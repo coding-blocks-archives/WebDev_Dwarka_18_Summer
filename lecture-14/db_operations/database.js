@@ -31,8 +31,16 @@ function insert(todo, cb) {
 
 }
 
+function deleteItem(id, cb) {
+    operations.deleteItem(connection, id , function(err){
+        cb(err);
+    })
+
+}
+
 module.exports = {
     connectDB,
     getData,
-    insert
+    insert,
+    deleteItem
 };

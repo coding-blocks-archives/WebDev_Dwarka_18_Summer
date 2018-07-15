@@ -18,7 +18,14 @@ function insert(connection, todo, cb) {
 
 }
 
+function deleteItem(connection, id, cb) {
+    connection.query(`DELETE FROM Task WHERE ID = ${id}`, function (error, results) {
+        cb(error, results);
+    });
+
+}
 module.exports = {
     display,
-    insert
+    insert,
+    deleteItem
 }
