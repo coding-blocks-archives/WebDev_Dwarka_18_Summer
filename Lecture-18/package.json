@@ -1,5 +1,5 @@
 {
-  "name": "lecture-12",
+  "name": "lecture-18",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,7 +9,6 @@
   "author": "“aayusharora” <“aayush113002@gmail.com”>",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.18.3",
-    "mysql": "^2.15.0"
+    "mongodb": "^3.1.1"
   }
 }

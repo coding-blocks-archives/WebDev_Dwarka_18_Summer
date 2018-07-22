@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul id="fruit">
+    {{!--
+        {{#each todo}}
+       {{#if this.name}}
+    <li>{{this.name}}</li>
+         {{/if}}
+    {{/each}}
+    --}}
+  {{#todo}}
+        {{title}}
+
+        {{#author}}
+            {{name}}
+            {{../title}}
+        {{/author}}
+        {{body}}
+ {{/todo}}
+</ul>
+<button onclick="change()">Change</button>
+<script>
+    var x = document.getElementById('fruit');
+    function change() {
+        x.innerHTML = 'mango';
+    }
+</script>
+</body>
+
+</html>

@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
+const mysql = require('./database');
 
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -38,5 +39,5 @@ app.get('/display', function(req,res) {
 
 app.listen(5000, function(){
   console.log("Server running on port 5000")
-
+   mysql.connectDB();
 });
